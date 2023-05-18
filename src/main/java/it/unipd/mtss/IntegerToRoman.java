@@ -8,6 +8,7 @@ package it.unipd.mtss;
 import java.util.TreeMap;
 
 public class IntegerToRoman {
+    private IntegerToRoman() {}
 
     private static final TreeMap<Integer, String> map = new TreeMap<>();
     static {
