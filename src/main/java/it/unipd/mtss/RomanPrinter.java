@@ -6,7 +6,7 @@
 package it.unipd.mtss;
 
 public class RomanPrinter {
-
+    private RomanPrinter(){}
     static final  String[] letterI = {
             " _____  ",
             "|_   _| ",
@@ -80,7 +80,7 @@ public class RomanPrinter {
             return number;
         }
         else {
-            throw new IllegalArgumentException("Can't print a void expression");
+            throw new IllegalArgumentException("Can't print an empty expression");
         }
     }
 
@@ -93,6 +93,7 @@ public class RomanPrinter {
         else if (letter.equals("C")){number+=printC(index);}
         else if (letter.equals("D")){number+=printD(index);}
         else if (letter.equals("M")){number+=printM(index);}
+        else {throw new IllegalArgumentException(letter+" is not a roman number");}
         return number;
     }
 
