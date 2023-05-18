@@ -27,6 +27,9 @@ public class IntegerToRoman {
     }
 
     public static String convert(int number){
+        if (number < 1 || number > 1000) {
+            throw new IllegalArgumentException("Il numero è maggiore di 1000");
+        }
         int roman = map.floorKey(number);
         if (number == roman) {
             return map.get(number);
